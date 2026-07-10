@@ -64,8 +64,13 @@
         if (toggle) toggle.addEventListener('click', function () { open(s, true); });
     });
 
-    // по умолчанию — СБП, как на реальной странице
-    if (sections.length) open(sections[0], false);
+    // по умолчанию — СБП, как на реальной странице;
+    // ?open=<data-payment-type> открывает нужный способ (для съёмки состояний)
+    var requested = new URLSearchParams(location.search).get('open');
+    var initial = sections.find(function (s) {
+        return s.getAttribute('data-payment-type') === requested;
+    }) || sections[0];
+    if (initial) open(initial, false);
 
     // карта: кнопка «Оплатить» активируется, когда все поля заполнены
     var cardInputs = Array.prototype.slice.call(
