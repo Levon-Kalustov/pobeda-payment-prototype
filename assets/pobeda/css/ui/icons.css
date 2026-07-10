@@ -1,0 +1,197 @@
+.icon {
+    display: flex;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+/* payment icons */
+
+.icon.icon_platichastyami {
+    width: 120px;
+    height: 32px;
+    background-image: url('../../img/icons/payment/platichastyami.svg');
+}
+
+html[data-appearance-theme="dark"] .icon.icon_platichastyami {
+    background-image: url("../../img/icons/payment/platichastyami-theme-dark.svg");
+}
+
+.icon.icon_dolyame {
+    display: flex;
+    width: 100px;
+    height: 32px;
+    padding: 9.543px 4.2px 9.657px 6.2px;
+    background-image: url("../../img/icons/payment/dolyame.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_dolyame {
+    background-image: url("../../img/icons/payment/dolyame-theme-dark.svg");
+}
+
+.icon.icon_platichastyami_fail {
+    width: 182px;
+    height: 182px;
+    background-image: url('../../img/icons/platichastyami-fail.png');
+}
+
+.icon.icon_sbp {
+    width: 56px;
+    height: 32px;
+    background-image: url('../../img/icons/payment/sbp.svg');
+}
+
+html[data-appearance-theme="dark"] .icon.icon_sbp {
+    background-image: url("../../img/icons/payment/sbp-theme-dark.svg");
+}
+
+.icon.icon_sberpay {
+    width: 52px;
+    height: 32px;
+    background-image: url("../../img/icons/payment/sberpay.svg");
+}
+
+.icon.icon_yandex {
+    width: 50px;
+    height: 32px;
+    background-image: url("../../img/icons/payment/yandexpay.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_yandex {
+    background-image: url("../../img/icons/payment/yandexpay-theme-dark.svg");
+}
+
+.icon.icon_sbp_big {
+    width: 239px;
+    height: 120px;
+    background-image: url('../../img/sbp.svg');
+}
+
+html[data-appearance-theme="dark"] .icon.icon_sbp_big {
+    background-image: url('../../img/sbp_dark.svg');
+}
+
+.icon.icon_card {
+    width: 32px;
+    height: 32px;
+    background-image: url("../../img/icons/payment/card.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_card {
+    background-image: url("../../img/icons/payment/card-theme-dark.svg");
+}
+
+.icon.icon_lang.ru {
+    background-image: url("../../img/icons/flag-russia.svg");
+}
+
+.icon.icon_lang.en {
+    background-image: url("../../img/icons/flag-eng.svg");
+}
+
+.icon.icon_theme {
+    background-image: url("../../img/icons/theme-light.svg");
+    opacity: var(--opacity-xl);
+}
+
+.icon.icon_arrow {
+    background-image: url("../../img/icons/arrow-large.svg");
+}
+
+.icon.icon_arrow_basket {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/icons/arrow-small.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_arrow {
+    background-image: url("../../img/icons/arrow-large-dark.svg");
+}
+
+.icon.icon_arrow-basket {
+    width: var(--icon-size-xs, 16px);
+    height: var(--icon-size-xs, 16px);
+    flex-shrink: 0;
+    background-image: url("../../img/icons/arrow-basket.svg");
+    transition: transform 0.4s;
+    transform: none;
+}
+
+.icon.icon_plane {
+    background-image: url("../../img/icons/flight-hor.svg");
+}
+
+.icon.icon_bus {
+    background-image: url("../../img/icons/bus.svg");
+}
+
+.icon.icon_close {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/icons/close.svg");
+}
+
+.icon.icon_yapay_big {
+    width: 140px;
+    height: 88px;
+    background-image: url("../../img/icons/yandex-icon.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_yapay_big {
+    background-image: url("../../img/icons/yandex-icon_dark.svg");
+}
+
+.right-arrow__icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/icons/right-arrow.svg");
+}
+
+.left-arrow__icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/icons/left-arrow.svg");
+}
+
+html[data-appearance-theme="dark"] .left-arrow__icon {
+    background-image: url("../../img/icons/left.svg");
+}
+
+html[data-appearance-theme="dark"] .icon.icon_close {
+    background-image: url("../../img/icons/close-dark.svg");
+}
+
+.basket-element.opened .icon.icon_arrow-basket {
+    transform: rotate(180deg);
+}
+
+html[data-appearance-theme="dark"] .icon.icon_theme {
+    background-image: url("../../img/icons/theme-dark.svg");
+}
+
+.icon.icon_pch-failed {
+    width: 182px;
+    height: 182px;
+    background-image: url("../../img/icons/pch-failed.png");
+}
+
+.icon.icon_brand {
+    width: 156px;
+    height: 40px;
+}
+
+.icon.icon_brand.ru {
+    background-image: url("../../img/icons/logo_ru.svg");
+}
+
+.icon.icon_brand.en {
+    background-image: url("../../img/icons/logo_en.svg");
+}
+
+.icon.icon_error {
+    background-image: url('../../img/icons/error.svg');
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+}

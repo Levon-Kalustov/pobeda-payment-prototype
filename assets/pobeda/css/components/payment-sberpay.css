@@ -1,0 +1,261 @@
+.sberpay-description__title {
+    color: var(--color-dark);
+}
+
+.sberpay-next {
+    display: block;
+    color: var(--color-brand);
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+    font-weight: 600;
+}
+
+.sberpay-back {
+    color: var(--color-dark);
+}
+
+.sberpay-htp {
+    display: none;
+    color: var(--color-brand);
+    margin-top: 28px;
+}
+
+.sberpay-mobile__description {
+    display: none;
+}
+
+.sberpay-qr_container {
+    column-gap: var(--space-xxs);
+}
+
+.sberpay-description__text {
+    margin-top: 8px;
+    color: var(--color-dark);
+    display: block;
+}
+
+
+.sberpay-push__submit.disabled {
+    color: var(--color-grey);
+    background: rgb(from var(--color-grey) r g b / 15%);
+    width: 180px;
+}
+
+.sberpay-push__submit {
+    background-color: var(--color-brand);
+    color: var(--color-paper);
+    width: 180px;
+    height: auto;
+}
+
+.sberpay-fields {
+    margin-top: 32px;
+    gap: var(--space-4xs);
+}
+
+.sberpay_input-error {
+    display: none;
+    margin-top: 4px;
+    margin-left: 18px;
+    transition: all 0.4s;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #B90055;
+}
+
+.sberpay-field__span {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    transition: all .15s;
+    color: var(--color-grey-dark);
+}
+
+.sberpay-push__input:focus ~ span,
+.sberpay-push__input:not(:placeholder-shown) ~ span {
+    top: 18px;
+    font-size: var(--font-size-xs);
+}
+
+.sberpay-field_wrapper {
+    flex: 1 0;
+}
+
+.sberpay-result__icon {
+    background-image: url('../../img/icons/sberpay-result.svg');
+    width: 182px;
+    height: 182px;
+}
+
+.sberpay-result-description {
+    flex: 1 0;
+    color: var(--color-dark);
+}
+
+.sberpay-result-description-link {
+    color: var(--color-brand);
+}
+
+.sberpay-result__tip {
+    color: var(--color-grey-dark);
+    margin-top: 16px;
+}
+
+.sberpay-result-back {
+    margin-top: 32px;
+}
+.sberpay-change-phone {
+    font-weight: 600;
+    color: var(--color-brand);
+}
+
+.sberpay-field {
+    display: flex;
+    height: 64px;
+    background: var(--color-over);
+    border-radius: 24px;
+    position: relative;
+    width: 100%;
+    transition: all 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sberpay-field__span {
+    color: var(--color-grey-dark);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-xs);
+    letter-spacing: 2%;
+    width: 100%;
+    padding: 0 var(--space-xxs);
+    letter-spacing: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: all .15s;
+}
+
+.sberpay-push__input {
+    color: var(--color-dark);
+    padding: 0 var(--space-xxs);
+    border: 1px solid var(--color-over);
+    width: 100%;
+    height: 100%;
+    text-indent: 0;
+    padding-top: 15px;
+}
+
+.sberpay-field:focus .sberpay-field__span {
+    top: 12px;
+}
+
+.sberpay-error__title {
+    color: #B90055;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sberpay-error__text {
+    color: var(--color-grey-dark);
+}
+
+.sberpay-qr,
+.sberpay-push {
+    display: none;
+}
+
+.payment-change__modal {
+    display: none;
+    border-radius: var(--space-sm) var(--space-sm) 0 0;
+    background-color: var(--color-over);
+    padding: var(--space-xs) var(--space-xs) var(--space-sm);
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.payment-change__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-change__title {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.payment-change__modal p {
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    line-height:  var(--line-height-xs);
+    letter-spacing: 0.02em;
+    margin: var(--space-xs) 0;
+    color: var(--color-dark);
+}
+
+.paybutton-change__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-change__btn {
+    width: 100%;
+    height: var(--space-3xl);
+    text-align: center;
+    border-radius: var(--space-xs);
+    background: var(--color-brand);
+    color: var(--color-paper);
+    font-weight: 600;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+}
+
+.close-sberpay__modal {
+    cursor: pointer;
+    background: url('../../img/icons/close.svg') no-repeat center center / contain;
+    width: 24px;
+    height: 24px;
+}
+
+.qr-sberpay-container {
+    padding: var(--space-xxs);
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px){
+    .sberpay-next .right-arrow__icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .sberpay-description {
+        display: none;
+    }
+    .sberpay-htp {
+        display: block;
+    }
+    .sberpay-next {
+        display: none;
+    }
+    .sberpay-mobile__description {
+        display: block;
+    }
+    .qr-sberpay-container {
+        display: none;
+    }
+    .sberpay-push {
+        display: none;
+    }
+    .sberpay-qr {
+        display: block;
+    }
+}

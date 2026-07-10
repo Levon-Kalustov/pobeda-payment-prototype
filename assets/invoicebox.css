@@ -1,0 +1,148 @@
+/* Invoicebox payment method — построено на переменных Победы (variables.css) */
+
+/* ---- анимация переключения способов оплаты ---- */
+
+.payment {
+    transition: background-color .35s ease;
+}
+
+/* высота/прозрачность контента анимируются из prototype.js,
+   тут — плавное появление кнопки и итога в правом блоке */
+.submit-item.opened {
+    animation: submit-in .35s ease;
+}
+
+@keyframes submit-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icon_invoicebox {
+    background-image: url("invoicebox-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 104px;
+    height: 22px;
+}
+
+.payment-invoicebox {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-xxs);
+    padding: 0 var(--space-xs) var(--space-xs);
+}
+
+.payment-invoicebox .payment-title {
+    row-gap: var(--space-5xs);
+}
+
+.invoicebox-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-4xs);
+    background: var(--color-base);
+    border-left: 4px solid var(--color-brand);
+    border-radius: var(--space-xxs);
+    padding: var(--space-xxs) var(--space-xs);
+    max-width: 640px;
+}
+
+.invoicebox-info__title {
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.invoicebox-info__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-5xs);
+    color: var(--color-dark);
+}
+
+.invoicebox-info__list li {
+    position: relative;
+    padding-left: 18px;
+}
+
+.invoicebox-info__list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-dark);
+}
+
+.invoicebox-info__link {
+    color: var(--color-brand);
+    text-decoration: none;
+}
+
+.invoicebox-info__link:hover {
+    text-decoration: underline;
+}
+
+/* график платежей «Плати частями»: стили этого блока на живой странице
+   внедряются скриптом виджета, в статике раскладываем сами */
+.bnpl-payments {
+    display: flex;
+    gap: var(--space-xxs);
+}
+
+.bnpl-payment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-5xs);
+}
+
+.bnpl-payment__square {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-grey);
+}
+
+.bnpl-payment__square.bnpl-payment__squareActive {
+    background: linear-gradient(90deg, #8ED14A, #21BA72);
+}
+
+.bnpl-schedule__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-4xs);
+}
+
+button.bnpl-button {
+    background: linear-gradient(90deg, #8ED14A, #00B4C8);
+    border: 0;
+    border-radius: 16px;
+    color: #fff;
+    height: 64px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* простое поле телефона вместо intl-tel-input в SberPay */
+.sberpay__input {
+    height: 56px;
+    border: 1px solid var(--color-grey);
+    border-radius: 16px;
+    padding: 0 var(--space-xxs);
+    font: inherit;
+    color: var(--color-dark);
+    width: 100%;
+    max-width: 320px;
+}

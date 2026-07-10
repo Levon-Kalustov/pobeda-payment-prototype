@@ -1,0 +1,278 @@
+/* payment-card */
+
+.payment-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-xxs);
+}
+
+/* errors */
+
+.card-check {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-xs);
+    justify-content: center;
+}
+
+.card-ssl-info {
+    display: flex;
+    align-items: flex-start;
+    column-gap: var(--space-4xs);
+}
+
+.card-ssl__text {
+    color: var(--color-grey-dark);
+}
+
+.card-ssl-info svg {
+    min-width: 24px;
+    height: 24px;
+}
+
+.card-error {
+    display: flex;
+    align-items: center;
+    column-gap: var(--space-4xs);
+    margin-bottom: var(--space-4xs);
+}
+
+.card-error__text {
+    color: var(--color-error);
+}
+
+/* card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: 368px;
+    width: 100%;
+    border: 1px solid var(--color-blue);
+    box-shadow: 0px 12px 20px 0px var(--color-base-shadow-5), 0px 0px 20px 0px var(--color-base-shadow-10);
+    background: var(--color-white-blue);
+    border-radius: var(--space-sm);
+    padding: var(--space-sm) var(--space-xs);
+    row-gap: var(--space-sm);
+}
+
+.card__top.remove-line::before {
+    content: none;
+}
+
+.card__top {
+    height: 40px;
+    position: relative;
+}
+
+.card__top::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: var(--color-blue-light);
+    bottom: 0;
+    left: -24px;
+    right: -24px;
+    opacity: 0.3;
+}
+
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-4xs);
+}
+
+.card__fields {
+    display: flex;
+    align-items: center;
+}
+
+.card__field {}
+
+.card__input {
+    /* desc-md */
+    /* font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    letter-spacing: 0.24px; */
+
+    /* desc-sm */
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-xs);
+    letter-spacing: 0.24px;
+
+    color: var(--color-dark);
+    width: 100%;
+    display: flex;
+    height: var(--space-md);
+    padding: 0px var(--space-3xs);
+    align-items: center;
+    /* gap: var(--media-space-5xs, 4px); */
+    align-self: stretch;
+    border-radius: var(--space-xs);
+    background: var(--color-over);
+    border: 1px solid var(--color-over);
+}
+
+.card__input.error {
+    background: var(--color-over);
+    border-color: var(--color-error) !important;
+}
+
+.card-cardnumber,
+.card-expiredate,
+.card-cccode,
+.card-holder {
+    position: relative;
+}
+
+.card-holder {
+    width: 100%;
+}
+
+.card-cardnumber {
+    margin-right: var(--space-4xs);
+    width: 100%;
+}
+
+.card-expiredate {
+    flex-shrink: 0;
+    width: 74px;
+    margin-right: var(--space-5xs);
+}
+
+.card-cccode {
+    width: 52px;
+    flex-shrink: 0;
+}
+
+#cardccnumber.card-cardnumber__input {}
+
+html[data-appearance-theme="dark"] #cardccnumber.card-cardnumber__input {
+    background: var(--color-over);
+    color: var(--color-grey-dark);
+    border-color: var(--color-over);
+}
+
+.card-cccode__cccode,
+#expiredate {}
+
+.card-cardholder__input {}
+
+#cardccnumber.card-cardnumber__input::placeholder,
+.card-cccode__cccode::placeholder,
+#expiredate::placeholder,
+.card-cardholder__input::placeholder {
+    color: var(--color-grey-dark);
+}
+
+.card-cardnumber label.error,
+.card-expiredate label.error,
+.card-cccode label.error,
+.card-holder label.error {
+    left: 0;
+    right: 0;
+    color: var(--color-error);
+    font-size: 12px;
+    display: none !important;
+}
+
+.card-type,
+.binding-card-type {
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.bank-logo,
+.binding-bank-logo {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+html[data-appearance-theme="dark"] .card {
+    background: var(--color-white-blue) !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .payment-card {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .card__fields {
+        flex-wrap: wrap;
+    }
+
+    .payment-card {
+        flex-direction: column;
+    }
+
+    .card__fields_top {
+        row-gap: var(--space-4xs);
+        column-gap: var(--space-5xs);
+    }
+
+    .card {
+        max-width: unset;
+        min-width: unset;
+        border: none;
+        background: none !important;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    html[data-appearance-theme="dark"] .card {
+        background: none !important;
+    }
+
+    .card__top {
+        display: none;
+    }
+
+    .card__fields_top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card-holder {
+        width: 100%;
+    }
+
+    .card-cardnumber {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .card-expiredate,
+    .card-cccode {
+        width: min-content;
+        flex-grow: 1;
+    }
+
+    .card__input {
+        /* body-md */
+        font-size: var(--font-size-md);
+        line-height: var(--line-height-md);
+        letter-spacing: 0;
+
+        height: var(--space-3xl);
+        padding: 0px var(--space-xxs);
+    }
+
+    .card-expiredate {
+        margin-right: 0
+    }
+
+}

@@ -1,0 +1,75 @@
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button {
+    color: var(--color-paper);
+    width: 100%;
+    height: var(--space-3xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 24px;
+    padding: 0 var(--space-xs);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    letter-spacing: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.button:disabled,
+.button.disabled {
+    color: var(--color-grey);
+    background: rgb(from var(--color-grey) r g b / 15%);
+    pointer-events: none;
+}
+
+.button_toggle {
+    height: initial;
+    padding: initial;
+    border-radius: initial;
+}
+
+.button_alpha {}
+
+.button_primary {
+    color: var(--color-paper);
+    background: var(--color-brand);
+}
+
+.button_primary:hover,
+.button_primary:active {
+    color: var(--color-paper);
+    background: var(--color-brand);
+}
+
+.button_accent {
+    background: var(--color-cta);
+}
+
+.button_tonal {
+    background: rgb(from var(--color-brand) r g b / 8%);
+}
+
+.button_yandexpay {
+    background: var(--color-yandex);
+}
+
+.button_sberpay {
+    background: var(--color-sber);
+}
+
+.button_dolyami {
+    background: var(--color-dolaymi);
+}
+
+.button_platichastyami {
+    background: var(--sber-gradient);
+}

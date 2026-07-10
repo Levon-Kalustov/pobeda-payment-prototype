@@ -1,0 +1,21 @@
+.payment-yandexpay {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+#yandexpay-button-1 {
+    border-radius: 24px;
+    height: 64px;
+    min-width: 180px;
+}
+
+.button_yandexpay {
+    padding: 0;
+}
+
+@media screen and (max-width: 639px) {
+    .payment-yandexpay__icon {
+        display: none;
+    }
+}

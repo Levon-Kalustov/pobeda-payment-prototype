@@ -1,0 +1,320 @@
+/* < payments */
+
+.payments {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xxs);
+    border-radius: var(--space-xl, 48px);
+    background: var(--color-over);
+}
+
+.payments__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xxs);
+}
+
+.payments__title {
+    color: var(--color-dark);
+}
+
+@media screen and (max-width: 400px) {
+    .payments__title {
+        font-size: 20px;
+    }
+}
+
+.timer__title {
+    color: var(--color-grey-dark);
+}
+
+.timer__value {
+    color: var(--color-brand);
+}
+
+.payments__timer {
+    color: var(--color-brand);
+}
+
+.payments__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-5xs);
+}
+
+.payment {
+    background: var(--color-base);
+    border-radius: 40px;
+    position: relative;
+    z-index: 0;
+}
+
+.payment.disabled {
+    pointer-events: none;
+}
+
+/* payment-header */
+
+.payment-header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    padding: var(--space-xs);
+    border-radius: 40px;
+}
+
+.payment-header__title {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--color-dark);
+    margin-left: var(--space-4xs);
+    flex: 1;
+    text-align: left;
+}
+
+
+.payment-header__toggle {
+    width: 20px;
+    height: 20px;
+    border-color: var(--color-grey-dark);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.payment.opened .payment-header__toggle {
+    border-width: 6px;
+    border-color: var(--color-brand);
+    background-color: #fff;
+}
+
+.payment.opened .payment-header {
+    pointer-events: none;
+}
+
+.payment-header__toggle::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    border: 6px solid transparent;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+}
+
+.payment-header__heading {
+    flex-direction: column;
+}
+
+[data-payment="content"] {
+    display: none;
+}
+
+.payment-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-xs);
+    padding: var(--space-xs);
+    padding-top: 0;
+}
+
+.payment-content.closed {
+    display: none
+}
+
+.payment-title {
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-4xs);
+}
+
+.payment-text_link {
+    color: var(--color-brand);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.payment-content__text {}
+
+.payment-content__text_sm {
+    color: var(--color-grey-dark);
+
+}
+
+.payment__heading_md {}
+
+.payment__desc {}
+
+.payment__desc_sm {}
+
+.payment__schedule {}
+
+.payment__schedule_dolyami {}
+
+.payment__schedule_platichastyami {}
+
+.payment__input {}
+
+/* payments > */
+
+/* schedule */
+
+.payment-content__block_view_schedules {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-5xs);
+}
+
+.payment-content__block_view_card {
+    display: flex;
+}
+
+.payment-content__block_view_card {
+    display: flex;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xxs);
+    border-radius: var(--media-space-xs, 24px);
+    background: var(--color-over);
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+}
+
+.schedule::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: -1px;
+    background: var(--color-over);
+    border-radius: var(--media-space-xs, 24px);
+}
+
+.schedule.chosed::before {
+    background: var(--sber-gradient);
+}
+
+.schedule:not(.chosed) {
+    cursor: pointer;
+}
+
+.schedule:not(.chosed) .schedule__payments {
+    display: none;
+}
+
+.schedule__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.schedule__header_group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.schedule__amount,
+.schedule__split {
+    color: var(--color-dark);
+}
+
+.schedule__month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    color: var(--color-dark);
+    background: rgb(from var(--color-dark) r g b / 8%);
+    border-radius: 100px;
+    padding: 0 var(--space-5xs);
+}
+
+.schedule__split {
+    margin-left: var(--space-5xs);
+}
+
+.schedule__desc {
+    color: var(--color-grey-dark);
+}
+
+.schedule__payments {
+    width: 100%;
+    display: flex;
+    column-gap: var(--space-5xs);
+    margin-top: 12px;
+}
+
+.schedule__payments_hidden {
+    display: none;
+}
+
+.schedule-payment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-5xs);
+}
+
+.schedule-payment__line {
+    width: 100%;
+    height: 8px;
+    border-radius: 16px;
+    background: var(--sber-gradient);
+}
+
+.schedule-payment__line_disabled {
+    background: var(--color-grey-light);
+}
+
+.schedule-payment__desc {
+    color: var(--color-grey-dark);
+}
+
+.schedule_view_inverse {
+    background: var(--color-base);
+}
+
+.bnpl-pch-failed__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.payment-status-content {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    row-gap: var(--space-xs);
+    padding: var(--space-xs);
+    padding-top: 0;
+    justify-content: center;
+}
+
+.payment-error .payment-title-heading {
+    display: flex;
+    flex-direction: column;
+}

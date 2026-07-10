@@ -1,0 +1,170 @@
+.payment-sbp__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--space-xxs);
+}
+
+.sbp-error-wrapper, .sberpay-error-wrapper {
+    display: none;
+}
+
+.sbp-description__text-mobile {
+    display: none;
+}
+
+.payment-sbp__desc {
+    color: var(--color-grey-dark);
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-sm);
+    row-gap: var(--space-4xs);
+}
+
+.qr-wrapper {
+    background-color: var(--color-over);
+    border-radius: 12px;
+    min-width: 182px;
+    width: 182px;
+    height: 182px;
+}
+
+.qr-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.payment-sbp__qr {
+    padding: var(--space-xxs);
+}
+
+.sbp-error__title {
+    color: #B90055;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sbp-error__text {
+    color: var(--color-grey-dark);
+}
+
+.payment-sbp__desc .mobile {
+    display: none;
+}
+.payment-sbp__desc .desktop {
+    display: block;
+}
+
+.button_sbp {
+    background-color: var(--color-cta);
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .button_sbp {
+        display: block;
+    }
+    .payment-sbp__qr {
+        display: none;
+    }
+    .payment-sbp__main .payment-title__desc {
+        display: none;
+    }
+    .payment-sbp__desc .mobile {
+        display: block;
+    }
+    .sbp-description__text-mobile {
+        display: block;
+    }
+    .payment-sbp__desc .desktop {
+        display: none;
+    }
+}
+
+.slide-up-widget {
+    font-family: inherit;
+}
+
+.slide-up-widget__header-image {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide-up-widget__header {
+    position: relative;
+}
+
+.slide-up-widget__header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 50px;
+    background-image: url('../../img/sbp.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+html[data-appearance-theme="dark"] .slide-up-widget__header::after {
+    background-image: url('../../img/sbp_dark.svg');
+}
+
+.slide-up-widget__header-close-btn {
+    background: none;
+    background-image: url("../../img/icons/close.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    color: transparent;
+}
+
+html[data-appearance-theme="dark"] .slide-up-widget__header-close-btn {
+    background-image: url("../../img/icons/close-dark.svg");
+}
+
+.slide-up-widget {
+    background-color: var(--color-over);
+}
+
+.slide-up-widget__header-text {
+    font-size: var(--font-size-xs);
+    color: var(--color-dark);
+}
+
+.slide-up-widget__input {
+    background-color: var(--color-base);
+    color: var(--color-grey-dark);
+    border: none;
+    border-radius: var(--space-xs);
+    height: var(--space-md);
+    padding: 0 var(--space-3xs);
+}
+
+.slide-up-widget__input::placeholder {
+    color: var(--color-grey-dark);
+}
+
+.slide-up-widget__bank {
+    height: 64px;
+    border-radius: var(--space-xs);
+    padding: var(--space-3xs);
+    background: var(--color-base);
+}
+
+.slide-up-widget__bank-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--space-3xs);
+    margin-right: var(--space-xxs);
+}
+
+.slide-up-widget__bank-title {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+}
